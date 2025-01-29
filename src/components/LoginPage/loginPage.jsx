@@ -1,7 +1,6 @@
 import React from 'react'
 
-import {Container, Title, Form, Input, InputGroup, Label, Button, RegisterText, Error} from "./styledComponents"
-import Header from '../Header/Header'
+import {Container, Title, Form, Input, InputGroup, Label, Button, RegisterText, Error, Logincontainer} from "./styledComponents"
 import Cookies from "js-cookie"
 import { useState } from 'react';
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -59,6 +58,7 @@ function LoginPage() {
   };
 
   return (
+    <Logincontainer>
     <Container>
       <Title>Login</Title>
       <Form onSubmit={handleLogin} action = "POST">
@@ -92,8 +92,8 @@ function LoginPage() {
         </Link>
         
       </Form>
-      
     </Container>
+    </Logincontainer>
   );
 }
 

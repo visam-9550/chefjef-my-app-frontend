@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaLongArrowAltLeft } from "react-icons/fa";
-import { Container, Title, Form, InputGroup, Input, Label, Success, Error, Button, LoginText } from './styledComponents';
+import { Container, Title, Form, InputGroup, Input, Label, Success, Error, Button, LoginText, Registercontainer } from './styledComponents';
 
 function RegisterPage() {
   const [formData, setFormData] = useState({
@@ -59,6 +59,7 @@ function RegisterPage() {
   };
 
   return (
+    <Registercontainer>
     <Container>
       <Title>Register</Title>
       <Form action = "POST">
@@ -117,6 +118,7 @@ function RegisterPage() {
         </Link>
       </Form>
     </Container>
+    </Registercontainer>
   );
 }
 
